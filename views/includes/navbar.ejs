@@ -1,0 +1,150 @@
+<style>
+  /* Navbar Styling */
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Brand Logo */
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fe424d !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .navbar-brand i {
+    font-size: 1.8rem;
+    color: #fe424d;
+    transition: transform 0.3s;
+  }
+
+  .navbar-brand:hover {
+    transform: scale(1.05);
+    color: #d6323e !important;
+  }
+
+  .navbar-brand:hover i {
+    transform: rotate(-10deg);
+    color: #d6323e;
+  }
+
+  /* Centered Search Bar */
+  /* Centered Search Bar with Left Spacing */
+  .search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 350px; /* Added space from the left */
+  }
+
+  .search-input {
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    width: 280px;
+    border: 1px solid #ddd;
+  }
+
+  .btn-search {
+    background-color: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    margin-left: 8px;
+    transition: 0.3s;
+  }
+
+  .btn-search:hover {
+    background-color: #d6323e;
+  }
+
+  /* Right Navigation Links */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #fe424d;
+  }
+
+  /* Icon Styling */
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Left Side: Brand -->
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid fa-plane-departure"></i> WanderLust
+    </a>
+
+    <!-- Navbar Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Center: Search Bar -->
+      <div class="search-container">
+        <form
+          class="d-flex"
+          role="search"
+          action="/listings/search"
+          method="get"
+        >
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Search destination"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="fa fa-search"></i> Search
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Side: Options and Authentication -->
+      <div class="navbar-nav nav-right ms-auto">
+        <a class="nav-link" href="/listings/new">
+          <i class="fa-solid fa-plus nav-icon"></i> Add your home
+        </a>
+
+        <% if (!currUser) { %>
+        <a class="nav-link" href="/signup">
+          <i class="fa-solid fa-user-plus nav-icon"></i> Sign Up
+        </a>
+        <a class="nav-link" href="/login">
+          <i class="fa-solid fa-right-to-bracket nav-icon"></i> Login
+        </a>
+        <% } else { %>
+        <a class="nav-link" href="/logout">
+          <i class="fa-solid fa-person-walking-arrow-right nav-icon"></i> Log
+          Out
+        </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
