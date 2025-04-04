@@ -31,12 +31,13 @@
     color: #d6323e;
   }
 
-  /* Search Bar Styling */
+  /* Centered Search Bar */
+  /* Centered Search Bar with Left Spacing */
   .search-container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    margin-left: auto;
+    margin-left: 350px; /* Added space from the left */
   }
 
   .search-input {
@@ -80,41 +81,9 @@
     color: #fe424d;
   }
 
-  /* Navbar Toggler Icon */
-  .navbar-toggler {
-    border: none;
-    font-size: 1.5rem;
-    color: #fe424d;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .search-container {
-      justify-content: center;
-      margin: 10px 0;
-      width: 100%;
-    }
-
-    .search-input {
-      width: 100%;
-    }
-
-    .btn-search {
-      width: auto;
-    }
-
-    .nav-right {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      padding-top: 10px;
-    }
-
-    .nav-link {
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-    }
+  /* Icon Styling */
+  .nav-icon {
+    font-size: 1.2rem;
   }
 </style>
 
@@ -125,25 +94,31 @@
       <i class="fa-solid fa-plane-departure"></i> WanderLust
     </a>
 
-    <!-- Navbar Toggler (Mobile Menu) -->
+    <!-- Navbar Toggler -->
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
     >
-      <i class="fa-solid fa-bars"></i>
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Navbar Content -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <!-- Center: Search Bar -->
       <div class="search-container">
-        <form class="d-flex w-100" role="search" action="/listings/search" method="get">
-          <input class="form-control search-input" type="search" placeholder="Search destination" />
+        <form
+          class="d-flex"
+          role="search"
+          action="/listings/search"
+          method="get"
+        >
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Search destination"
+          />
           <button class="btn btn-search" type="submit">
             <i class="fa fa-search"></i> Search
           </button>
@@ -165,7 +140,8 @@
         </a>
         <% } else { %>
         <a class="nav-link" href="/logout">
-          <i class="fa-solid fa-person-walking-arrow-right nav-icon"></i> Log Out
+          <i class="fa-solid fa-person-walking-arrow-right nav-icon"></i> Log
+          Out
         </a>
         <% } %>
       </div>
