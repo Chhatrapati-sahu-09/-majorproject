@@ -31,13 +31,12 @@
     color: #d6323e;
   }
 
-  /* Centered Search Bar */
-  /* Centered Search Bar with Left Spacing */
+  /* Search Bar Container */
   .search-container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    margin-left: 350px; /* Added space from the left */
+    margin-left: 350px;
   }
 
   .search-input {
@@ -66,6 +65,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-top: 10px;
   }
 
   .nav-link {
@@ -81,44 +81,52 @@
     color: #fe424d;
   }
 
-  /* Icon Styling */
   .nav-icon {
     font-size: 1.2rem;
   }
 
-@media (max-width: 991.98px) {
-  .search-container {
-    justify-content: start;
-    margin-left: 0; /* Remove fixed margin on small screens */
-    width: 100%;
-    padding: 0.5rem 0;
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .search-container {
+      margin-left: 0;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .navbar-nav.nav-right {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .search-input {
+      width: 200px;
+    }
+
+    .btn-search {
+      padding: 0.5rem 1rem;
+    }
   }
 
-  .nav-right {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin-top: 1rem;
-  }
+  @media (max-width: 576px) {
+    .search-input {
+      width: 150px;
+    }
 
-  .search-input {
-    width: 100%;
-    max-width: 100%;
-  }
+    .btn-search {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
 
-  .btn-search {
-    margin-left: 0;
-    margin-top: 0.5rem;
-    width: 100%;
-  }
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
 
-  .search-container form {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+    .navbar-brand i {
+      font-size: 1.5rem;
+    }
   }
-}
-
 </style>
 
 <nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
@@ -152,6 +160,7 @@
             class="form-control search-input"
             type="search"
             placeholder="Search destination"
+            name="q"
           />
           <button class="btn btn-search" type="submit">
             <i class="fa fa-search"></i> Search
@@ -174,8 +183,7 @@
         </a>
         <% } else { %>
         <a class="nav-link" href="/logout">
-          <i class="fa-solid fa-person-walking-arrow-right nav-icon"></i> Log
-          Out
+          <i class="fa-solid fa-person-walking-arrow-right nav-icon"></i> Log Out
         </a>
         <% } %>
       </div>
