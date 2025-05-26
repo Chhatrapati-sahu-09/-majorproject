@@ -1,4 +1,49 @@
 <% layout("/layouts/boilerplate") %>
+/* Scrollable Filter Bar Styling */
+.scrollable-tabs-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 0 1rem;
+}
+
+/* Inner filter container */
+.filter-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.filter-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Arrow Buttons */
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
 <!-- <h3>All Listing</h3> -->
 <!-- <form method="GET" action="/listings/new">
             <button>Create new listing</button>
