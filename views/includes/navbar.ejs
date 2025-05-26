@@ -85,6 +85,40 @@
   .nav-icon {
     font-size: 1.2rem;
   }
+
+@media (max-width: 991.98px) {
+  .search-container {
+    justify-content: start;
+    margin-left: 0; /* Remove fixed margin on small screens */
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn-search {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .search-container form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}
+
 </style>
 
 <nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
