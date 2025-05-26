@@ -434,6 +434,31 @@ body {
 }
 
 /*MEDIA QUERIES*/
+
+
+/* Make navbar-collapse full width on small screens */
+@media (max-width: 576px) {
+  .navbar-collapse {
+    width: 100% !important;  /* full width */
+    margin: 0 !important;    /* remove any margin */
+    padding: 0 !important;   /* remove any padding */
+  }
+
+  /* Optional: to ensure the background covers full width */
+  .navbar-collapse.collapsing,
+  .navbar-collapse.show {
+    width: 100% !important;
+  }
+
+  /* If container is inside navbar-collapse, remove padding */
+  .navbar-collapse .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+
 @media screen and (max-width: 576px) {
   #listing_image {
     width: 100%;
