@@ -436,6 +436,38 @@ body {
 /*MEDIA QUERIES*/
 
 @media (max-width: 576px) {
+  .navbar-collapse {
+    width: 100% !important;  /* full width */
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-color: #fff;  /* keep background white */
+  }
+
+  /* Remove container padding if container is inside navbar-collapse */
+  .navbar-collapse > .container,
+  .navbar-collapse > .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Make navbar-nav full width */
+  .navbar-nav {
+    width: 100% !important;
+  }
+
+  /* Optional: nav-links full width */
+  .navbar-nav .nav-link {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 576px) {
   /* Make navbar-collapse full width */
   .navbar-collapse {
     width: 100% !important;
