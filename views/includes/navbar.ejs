@@ -54,7 +54,6 @@
     border: none;
     margin-left: 8px;
     transition: 0.3s;
-    font-weight: 600; /* bold text */
   }
 
   .btn-search:hover {
@@ -87,8 +86,8 @@
   }
 
   .nav-icon {
-    font-size: 1.2rem;
-    flex-shrink: 0;
+    font-size: 1.2rem; /* keep icon size */
+    flex-shrink: 0; /* prevent shrinking */
   }
 
   /* Responsive Tweaks */
@@ -110,10 +109,9 @@
 
     .nav-right {
       flex-direction: column;
-      align-items: flex-start; /* Leftmost corner */
+      align-items: flex-end;
       gap: 10px;
       margin-top: 15px;
-      justify-content: flex-start; /* important for left alignment */
     }
   }
 </style>
