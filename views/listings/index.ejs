@@ -172,10 +172,11 @@
   <% } %>
 </div>
 <script>
+  // Tax toggle functionality
   let taxSwitch = document.getElementById("flexSwitchCheckDefault");
   taxSwitch.addEventListener("click", () => {
     let taxInfo = document.getElementsByClassName("tax-info");
-    for (info of taxInfo) {
+    for (let info of taxInfo) {
       if (info.style.display != "inline") {
         info.style.display = "inline";
       } else {
@@ -183,4 +184,20 @@
       }
     }
   });
+
+  // Scrollable tabs arrow functionality
+  const leftArrow = document.querySelector(".left-arrow");
+  const rightArrow = document.querySelector(".right-arrow");
+  const filterContainer = document.querySelector(".filter-container");
+
+  if (leftArrow && rightArrow && filterContainer) {
+    rightArrow.addEventListener("click", () => {
+      filterContainer.scrollBy({ left: 200, behavior: "smooth" });
+    });
+
+    leftArrow.addEventListener("click", () => {
+      filterContainer.scrollBy({ left: -200, behavior: "smooth" });
+    });
+  }
 </script>
+
