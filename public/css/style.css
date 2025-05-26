@@ -25,30 +25,8 @@ body {
 .nav-link {
   color: #222222;
 }
-
 .navbar-collapse {
   background-color: #fff;
-}
-
-.container-nav {
-  position: relative;
-  width: 100%;
-}
-
-.navbar-brand {
-  left: 15px;
-  position: absolute;
-}
-
-.navbar-nav {
-  margin: 0 auto;
-  width: 393px;
-}
-
-#togglerLable {
-  position: absolute;
-  right: 15px;
-  top: 0;
 }
 
 /* footer */
