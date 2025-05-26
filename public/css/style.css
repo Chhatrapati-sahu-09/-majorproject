@@ -433,7 +433,7 @@ body {
   }
 }
 
-/*MEDIA QUERIES*/
+/* MEDIA QUERIES */
 
 @media (max-width: 576px) {
   .navbar-collapse {
@@ -443,7 +443,16 @@ body {
     padding-right: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    background-color: #fff;  /* keep background white */
+    background-color: #fff !important;  /* keep background white */
+
+    /* Removed fixed position and full height */
+    /* position: fixed; */
+    /* top: 5rem; */
+    /* left: 0; */
+    /* right: 0; */
+    /* height: calc(100vh - 5rem); */
+    /* overflow-y: auto; */
+    /* z-index: 1050; */
   }
 
   /* Remove container padding if container is inside navbar-collapse */
@@ -460,60 +469,14 @@ body {
     width: 100% !important;
   }
 
-  /* Optional: nav-links full width */
-  .navbar-nav .nav-link {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 576px) {
-  /* Make navbar-collapse full width */
-  .navbar-collapse {
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    position: fixed;       /* fix the navbar collapse on screen */
-    top: 5rem;             /* just below your navbar height */
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 1050;         /* above other content */
-    height: calc(100vh - 5rem); /* full height minus navbar */
-    overflow-y: auto;      /* scroll if content is long */
-  }
-
-  /* Remove container padding inside navbar-collapse */
-  .navbar-collapse > .container,
-  .navbar-collapse > .container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-
-  /* Make navbar-nav take full width */
-  .navbar-nav {
-    width: 100% !important;
-  }
-
-  /* Remove width restrictions on navbar-nav children */
+  /* Nav-links full width */
   .navbar-nav .nav-link {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}
 
-/* Make navbar-collapse full width on small screens */
-@media (max-width: 576px) {
-  .navbar-collapse {
-    width: 100% !important;  /* full width */
-    margin: 0 !important;    /* remove any margin */
-    padding: 0 !important;   /* remove any padding */
-  }
-
-  /* Optional: to ensure the background covers full width */
+  /* Optional: ensure background covers full width when collapsing */
   .navbar-collapse.collapsing,
   .navbar-collapse.show {
     width: 100% !important;
@@ -525,8 +488,6 @@ body {
     padding-right: 0 !important;
   }
 }
-
-
 
 @media screen and (max-width: 576px) {
   #listing_image {
@@ -637,7 +598,6 @@ body {
   }
 }
 
-
 /* Extra Small Devices (portrait phones, less than 400px) */
 @media screen and (max-width: 399px) {
   .navbar-nav {
@@ -737,3 +697,4 @@ body {
     width: 60%;
   }
 }
+
