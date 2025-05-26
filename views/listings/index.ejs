@@ -1,160 +1,185 @@
-<% layout("/layouts/boilerplate") %>
+<style>
+  /* Navbar Styling */
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
 
+  /* Brand Logo */
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fe424d !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, color 0.3s;
+  }
 
-<!-- <h3>All Listing</h3> -->
-<!-- <form method="GET" action="/listings/new">
-            <button>Create new listing</button>
-        </form> -->
-<div id="filters">
-  <div class="scrollable-tabs-container">
-    <div class="left-arrow">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 19.5 8.25 12l7.5-7.5"
-        />
-      </svg>
-    </div>
-    <div class="filter-container">
-      <a class="filter active" href="/listings">
-        <div><i class="fa-solid fa-house"></i></div>
-        <p>ALL</p>
-      </a>
-      <!-- <a class="filter" href="/listings/filter/Trending">
-                  <div><i class="fa-solid fa-fire"></i></div>
-                  <p>Trending</p>
-                </a> -->
-      <a class="filter" href="/listings/filter/Iconic cities">
-        <div><i class="fa-solid fa-mountain-city"></i></div>
-        <p>Iconic cities</p>
-      </a>
-      <a class="filter" href="/listings/filter/Mountains">
-        <div><i class="fa-solid fa-mountain"></i></div>
-        <p>Mountains</p>
-      </a>
-      <a class="filter" href="/listings/filter/Castles">
-        <div><i class="fa-brands fa-fort-awesome"></i></div>
-        <p>Castles</p>
-      </a>
-      <a class="filter" href="/listings/filter/Amazing pools">
-        <div><i class="fa-solid fa-person-swimming"></i></div>
-        <p>Amazing pools</p>
-      </a>
-      <a class="filter" href="/listings/filter/Rooms">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>Rooms</p>
-      </a>
-      <a class="filter" href="/listings/filter/Camping">
-        <div><i class="fa-solid fa-campground"></i></div>
-        <p>Camping</p>
-      </a>
-      <a class="filter" href="/listings/filter/Farms">
-        <div><i class="fa-solid fa-cow"></i></div>
-        <p>Farms</p>
-      </a>
-      <a class="filter" href="/listings/filter/Arctic">
-        <div><i class="fa-regular fa-snowflake"></i></div>
-        <p>Arctic</p>
-      </a>
-      <a class="filter" href="/listings/filter/Domes">
-        <div><i class="fa-solid fa-igloo"></i></div>
-        <p>Domes</p>
-      </a>
-      <a class="filter" href="/listings/filter/Boats">
-        <div><i class="fa-solid fa-ship"></i></div>
-        <p>Boats</p>
-      </a>
-    </div>
-    <div class="right-arrow active">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="{1.5}"
-        stroke="currentColor"
-        className="w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="m8.25 4.5 7.5 7.5-7.5 7.5"
-        />
-      </svg>
-    </div>
-  </div>
+  .navbar-brand i {
+    font-size: 1.8rem;
+    color: #fe424d;
+    transition: transform 0.3s;
+  }
 
-  <div class="tax-toggle">
-    <div class="form-check-reverse form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckDefault"
-      />
-      <label class="form-check-label" for="flexSwitchCheckDefault"
-        >Display total after taxes</label
-      >
-    </div>
-  </div>
-</div>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
-  <% for(let listing of allListings) { %>
-  <a href="/listings/<%= listing._id %>" class="listing-link">
-    <div class="card col listing-card">
-      <img
-        src="<%= listing.image.url %>"
-        class="card-img-top"
-        alt="listing_image"
-        style="height: 20rem"
-      />
-      <div class="card-img-overlay"></div>
-      <div class="card-body">
-        <p class="card-text">
-          <b> <%= listing.title %> </b>
-          <br />
-          &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
-          <i class="tax-info"> &nbsp;&nbsp; +18% GST</i>
-        </p>
+  .navbar-brand:hover {
+    transform: scale(1.05);
+    color: #d6323e !important;
+  }
+
+  .navbar-brand:hover i {
+    transform: rotate(-10deg);
+    color: #d6323e;
+  }
+
+  /* Search Bar Container */
+  .search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .search-input {
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    width: 280px;
+    border: 1px solid #ddd;
+  }
+
+  .btn-search {
+    background-color: #fe424d;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    margin-left: 8px;
+    transition: 0.3s;
+    font-weight: 600; /* bold text */
+  }
+
+  .btn-search:hover {
+    background-color: #d6323e;
+  }
+
+  /* Right Navigation Links */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    font-weight: 600; /* made text more bold */
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: #fe424d;
+  }
+
+  .nav-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* Responsive Tweaks */
+  @media (max-width: 992px) {
+    .search-container {
+      justify-content: flex-start;
+      margin-left: 0;
+    }
+
+    .search-input {
+      width: 180px;
+      padding: 0.4rem 0.8rem;
+    }
+
+    .btn-search {
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-right {
+      flex-direction: column;
+      align-items: flex-start; /* Leftmost corner */
+      gap: 10px;
+      margin-top: 15px;
+      justify-content: flex-start; /* important for left alignment */
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Left Side: Brand -->
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid fa-plane-departure"></i> WanderLust
+    </a>
+
+    <!-- Navbar Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Center: Search Bar -->
+      <div class="search-container">
+        <form
+          class="d-flex"
+          role="search"
+          action="/listings/search"
+          method="get"
+        >
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Search destination"
+            name="q"
+            aria-label="Search"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="fa fa-search"></i> Search
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Side: Options and Authentication -->
+      <div class="navbar-nav nav-right ms-auto">
+        <a class="nav-link" href="/listings/new">
+          <i class="fa-solid fa-plus nav-icon"></i> Add your home
+        </a>
+
+        <% if (!currUser) { %>
+          <a class="nav-link" href="/signup">
+            <i class="fa-solid fa-user-plus nav-icon"></i> Sign Up
+          </a>
+          <a class="nav-link" href="/login">
+            <i class="fa-solid fa-right-to-bracket nav-icon"></i> Login
+          </a>
+        <% } else { %>
+          <a class="nav-link" href="/logout">
+            <i class="fa-solid fa-person-walking-arrow-right nav-icon"></i> Log Out
+          </a>
+        <% } %>
       </div>
     </div>
-  </a>
-  <% } %>
-</div>
-<script>
-  // Tax toggle functionality
-  let taxSwitch = document.getElementById("flexSwitchCheckDefault");
-  taxSwitch.addEventListener("click", () => {
-    let taxInfo = document.getElementsByClassName("tax-info");
-    for (let info of taxInfo) {
-      if (info.style.display != "inline") {
-        info.style.display = "inline";
-      } else {
-        info.style.display = "none";
-      }
-    }
-  });
-
-  // Scrollable tabs arrow functionality
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
-  const filterContainer = document.querySelector(".filter-container");
-
-  if (leftArrow && rightArrow && filterContainer) {
-    rightArrow.addEventListener("click", () => {
-      filterContainer.scrollBy({ left: 200, behavior: "smooth" });
-    });
-
-    leftArrow.addEventListener("click", () => {
-      filterContainer.scrollBy({ left: -200, behavior: "smooth" });
-    });
-  }
-</script>
-
+  </div>
+</nav>
