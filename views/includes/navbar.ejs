@@ -54,6 +54,7 @@
     border: none;
     margin-left: 8px;
     transition: 0.3s;
+    font-weight: 600;
   }
 
   .btn-search:hover {
@@ -72,7 +73,7 @@
   }
 
   .nav-link {
-    font-weight: 300; /* thin text */
+    font-weight: 300;
     color: #333;
     display: flex;
     align-items: center;
@@ -86,12 +87,16 @@
   }
 
   .nav-icon {
-    font-size: 1.2rem; /* keep icon size */
-    flex-shrink: 0; /* prevent shrinking */
+    font-size: 1.2rem;
+    flex-shrink: 0;
   }
 
   /* Responsive Tweaks */
   @media (max-width: 992px) {
+    .navbar-collapse {
+      width: 100%;
+    }
+
     .search-container {
       justify-content: flex-start;
       margin-left: 0;
@@ -109,9 +114,11 @@
 
     .nav-right {
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
       gap: 10px;
       margin-top: 15px;
+      justify-content: flex-start;
+      width: 100%;
     }
   }
 </style>
@@ -137,15 +144,10 @@
     </button>
 
     <!-- Navbar Content -->
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse w-100" id="navbarNav">
       <!-- Center: Search Bar -->
       <div class="search-container">
-        <form
-          class="d-flex"
-          role="search"
-          action="/listings/search"
-          method="get"
-        >
+        <form class="d-flex" role="search" action="/listings/search" method="get">
           <input
             class="form-control search-input"
             type="search"
