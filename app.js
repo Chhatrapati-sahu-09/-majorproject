@@ -104,6 +104,16 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("listings/error.ejs", { message });
 });
 
+
+app.get("/terms", (req, res) => {
+    res.render("terms");
+});
+
+app.get("/privacy", (req, res) => {
+    res.render("privacy");
+});
+
+
 // Starting the server
 app.listen(8080, () => {
   console.log("Server started on port 8080");
