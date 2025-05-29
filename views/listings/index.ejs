@@ -126,14 +126,22 @@
 <% } %>
 
 
-<a href="/listings/new" class="listing-link text-decoration-none">
-  <div class="card col listing-card rounded-0 border shadow-sm d-flex justify-content-center align-items-center" style="height: 20rem;">
-    <div class="card-body text-center">
-      <h4 class="text-primary mb-2">+ Add Your Listing</h4>
+<!-- Add Your Listing card at the end -->
+<a href="/listings/new" class="text-decoration-none">
+  <div class="card col listing-card border shadow-sm d-flex justify-content-center align-items-center bg-light"
+       style="height: 20rem; transition: all 0.3s ease; border-radius: 1rem;">
+    <div class="text-center">
+      <!-- Styled Add Button like the Screenshot -->
+      <div class="d-flex justify-content-center align-items-center mx-auto mb-3"
+           style="width: 100px; height: 100px; background-color: #ff4757; color: white; border-radius: 50%; font-size: 2.5rem;">
+        +
+      </div>
+      <h5 class="text-dark mb-2 fw-semibold">Add Your Listing</h5>
       <p class="text-muted">Click here to list your property</p>
     </div>
   </div>
 </a>
+
 
 
 </div>
