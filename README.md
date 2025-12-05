@@ -293,33 +293,33 @@ majorproject/
 
 ## 📸 Screenshots
 
-### Homepage
+### Homepage - Landing Page
 ![Homepage](./images/Screenshot%202025-12-05%20134249.png)
-*Browse all travel destinations with beautiful card layouts*
+*Clean and simple landing page welcoming visitors to explore travel destinations*
 
 ### Listing Details
 ![Listing Details](./images/Screenshot%202025-12-05%20134323.png)
-*View complete information, images, and reviews for each destination*
+*Detailed destination page showing complete information, image gallery, location map, and user reviews when clicking on any listing*
 
 ### Create Listing
 ![Create Listing](./images/Screenshot%202025-12-05%20134420.png)
-*Easy-to-use form for adding new travel destinations*
+*Listing page displaying destination details with user reviews and ratings visible below*
 
 ### Search & Filter
 ![Search and Filter](./images/Screenshot%202025-12-05%20134439.png)
-*Powerful search with multiple filtering options*
+*Search functionality allowing users to find destinations by entering location names or keywords in the search bar*
 
 ### User Authentication
 ![Login/Signup](./images/Screenshot%202025-12-05%20134458.png)
-*Secure user authentication system*
+*User registration page where new users can create an account to access all platform features*
 
 ### Filtered Results
 ![Filtered Listings](./images/Screenshot%202025-12-05%20134747.png)
-*Browse destinations by category and preferences*
+*Create new listing page with a user-friendly form where users can add their travel destinations with details and images*
 
 ### Review System
 ![Reviews](./images/Screenshot%202025-12-05%20134824.png)
-*Rate and review destinations to help other travelers*
+*Search results page displaying listings filtered by user query, showing matching destinations based on search terms*
 
 ---
 
