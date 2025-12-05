@@ -2,6 +2,14 @@
   <img src="./public/icon/favicon.svg" alt="Wanderlust Logo" width="120" height="120">
 </div>
 
+![Node](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
+![EJS](https://img.shields.io/badge/EJS-FFA500)
+![Passport](https://img.shields.io/badge/Passport.js-34E27A)
+![Render](https://img.shields.io/badge/Render-46E3B7)
+
+
 # 🌍 Wanderlust – Travel Destination Listing Platform
 
 A dynamic full-stack web application for creating, browsing, and managing travel destination listings. Built with the MERN stack and following MVC architecture.
