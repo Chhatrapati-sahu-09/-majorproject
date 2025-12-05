@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./public/icon/favicon.svg" alt="Wanderlust Logo" width="120" height="120">
+</div>
+
 # 🌍 Wanderlust – Travel Destination Listing Platform
 
 A dynamic full-stack web application for creating, browsing, and managing travel destination listings. Built with the MERN stack and following MVC architecture.
@@ -293,33 +297,33 @@ majorproject/
 
 ## 📸 Screenshots
 
-### Homepage - Landing Page
+### 1. Homepage – Explore Travel Listings
 ![Homepage](./images/Screenshot%202025-12-05%20134249.png)
-*Clean and simple landing page welcoming visitors to explore travel destinations*
+*The Wanderlust homepage where users can browse featured travel destinations. It displays listings with images, pricing, categories, and location details in a clean grid layout. The top navigation includes search, category filters, login/signup, and add-home options.*
 
-### Listing Details
+### 2. Individual Listing Page – Full Details View
 ![Listing Details](./images/Screenshot%202025-12-05%20134323.png)
-*Detailed destination page showing complete information, image gallery, location map, and user reviews when clicking on any listing*
+*This page shows the complete details of a selected travel destination. Users can view high-resolution images, listing descriptions, owner information, price, location, and country. The layout ensures a clean, immersive experience focused on the destination.*
 
-### Create Listing
+### 3. Reviews Section – User Feedback & Ratings
 ![Create Listing](./images/Screenshot%202025-12-05%20134420.png)
-*Listing page displaying destination details with user reviews and ratings visible below*
+*Each listing includes a review section where users can share their experiences. Reviews display usernames, star ratings, and comments. This helps new visitors evaluate the authenticity and quality of the listing.*
 
-### Search & Filter
+### 4. More Listings – Category-Based Browsing
 ![Search and Filter](./images/Screenshot%202025-12-05%20134439.png)
-*Search functionality allowing users to find destinations by entering location names or keywords in the search bar*
+*This section displays additional accommodation options such as luxury resorts, heritage rooms, and budget stays. Users can browse listings filtered by categories like rooms, iconic cities, mountains, farms, and more.*
 
-### User Authentication
+### 5. Signup Page – Create a New Account
 ![Login/Signup](./images/Screenshot%202025-12-05%20134458.png)
-*User registration page where new users can create an account to access all platform features*
+*The signup page allows users to register on Wanderlust using a username, email, and password. The UI is simple, clean, and focused on easy onboarding for new users.*
 
-### Filtered Results
+### 6. Create a New Listing – Add a Property
 ![Filtered Listings](./images/Screenshot%202025-12-05%20134747.png)
-*Create new listing page with a user-friendly form where users can add their travel destinations with details and images*
+*This form enables authenticated users to create a new travel listing. Users can upload images, write descriptions, select categories, enter pricing, country, and location. The form integrates Multer & Cloudinary for image uploads and uses server-side validation.*
 
-### Review System
+### 7. Search Results – Query-Based Filtering
 ![Reviews](./images/Screenshot%202025-12-05%20134824.png)
-*Search results page displaying listings filtered by user query, showing matching destinations based on search terms*
+*Users can search listings using keywords like "Cottage". The platform returns matching results and displays a success message indicating the applied search filter. This feature allows users to quickly find specific types of properties.*
 
 ---
 
