@@ -10,6 +10,7 @@
 ![Render](https://img.shields.io/badge/Render-46E3B7)
 
 
+
 # 🌍 Wanderlust – Travel Destination Listing Platform
 
 A dynamic full-stack web application for creating, browsing, and managing travel destination listings. Built with the MERN stack and following MVC architecture.
@@ -45,28 +46,57 @@ Wanderlust is a comprehensive travel listing platform developed during my full-s
 
 ## 🚀 Tech Stack
 
-### Frontend
-- **HTML5** - Markup language
-- **CSS3** - Styling
-- **JavaScript** - Client-side scripting
-- **Bootstrap** - Responsive UI framework
-- **EJS** - Templating engine
+### 🎨 Frontend
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)
+![EJS](https://img.shields.io/badge/EJS-8BC34A)
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web application framework
-- **Passport.js** - Authentication middleware
-- **Multer** - File upload handling
+- **HTML5** – Structure & markup  
+- **CSS3** – Styling & layout  
+- **JavaScript** – Client-side scripting  
+- **Bootstrap** – Responsive UI framework  
+- **EJS** – Server-side templating engine  
 
-### Database
-- **MongoDB Atlas** - Cloud database
-- **Mongoose** - ODM for MongoDB
+---
 
-### Cloud Services
-- **Cloudinary** - Image storage and management
+### ⚙️ Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
+![Passport.js](https://img.shields.io/badge/Passport.js-34E27A?logo=passport)
+![Multer](https://img.shields.io/badge/Multer-FF6C37)
 
-### Architecture
-- **MVC Pattern** - Model-View-Controller design pattern
+- **Node.js** – JavaScript runtime environment  
+- **Express.js** – Web application framework  
+- **Passport.js** – Authentication middleware  
+- **Multer** – File upload handling  
+
+---
+
+### 🗄️ Database
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000)
+
+- **MongoDB Atlas** – Cloud database  
+- **Mongoose** – ODM for MongoDB  
+
+---
+
+### ☁️ Cloud Services
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?logo=cloudinary&logoColor=white)
+![Render](https://img.shields.io/badge/Render.com-46E3B7?logo=render&logoColor=white)
+
+- **Cloudinary** – Image storage & optimization  
+- **Render** – Hosting & deployment  
+
+---
+
+### 🧩 Architecture
+![MVC](https://img.shields.io/badge/Architecture-MVC-blue)
+![CRUD](https://img.shields.io/badge/CRUD-Operations-success)
+
+- **MVC Pattern** – Model-View-Controller structure  
 
 ---
 
