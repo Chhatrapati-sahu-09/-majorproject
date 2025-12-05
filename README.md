@@ -2,13 +2,20 @@
   <img src="./public/icon/favicon.svg" alt="Wanderlust Logo" width="120" height="120">
 </div>
 
-![Node](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
-![EJS](https://img.shields.io/badge/EJS-FFA500)
-![Passport](https://img.shields.io/badge/Passport.js-34E27A)
-![Render](https://img.shields.io/badge/Render-46E3B7)
-
+![Mongoose](https://img.shields.io/badge/Mongoose-880000)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)
+![Passport.js](https://img.shields.io/badge/Passport.js-34E27A?logo=passport)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?logo=cloudinary&logoColor=white)
+![Render](https://img.shields.io/badge/Render.com-46E3B7?logo=render&logoColor=white)
+![Multer](https://img.shields.io/badge/Multer-FF6C37)
+![MVC](https://img.shields.io/badge/Architecture-MVC-blue)
+![CRUD](https://img.shields.io/badge/CRUD-Operations-success)
 
 
 # 🌍 Wanderlust – Travel Destination Listing Platform
