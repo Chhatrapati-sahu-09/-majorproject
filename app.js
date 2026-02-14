@@ -19,7 +19,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const userRouter = require("./routes/user.js");
 
-//==============================================================
+//====================================================
 
 const dbUrl = process.env.ATLASDB_URL;
 
